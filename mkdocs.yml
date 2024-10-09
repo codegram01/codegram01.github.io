@@ -21,8 +21,8 @@ theme:
     - navigation.prune
     - navigation.indexes
     - navigation.tabs
-    # - header.autohide
-    - navigation.tabs.sticky
+    - header.autohide
+    # - navigation.tabs.sticky
     
     - toc.follow
     - search.suggest
