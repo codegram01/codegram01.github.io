@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Hello World","text":"<p>ok</p>"}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Home Page","text":""},{"location":"about/license/","title":"License Page","text":""},{"location":"about/note/","title":"Note Page","text":""},{"location":"guide/","title":"Guide Page","text":""},{"location":"guide/style/","title":"Style Page","text":""},{"location":"guide/write/","title":"Write page","text":""}]}

@@ -164,9 +164,7 @@ b {
     color: var(--color-text-bold) !important;
 }
 
-.md-nav__title {
-    display: none;
-}
+
 
 .md-header__title .md-ellipsis {
     background: var(--color-gradient-branch);
