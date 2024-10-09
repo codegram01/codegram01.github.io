@@ -1,11 +1,18 @@
 site_name: WingramOrg
 site_url: https://wingram.org
+# repo_url: https://github.com/codegram01/WingramOrg
+# repo_name: ""
+# edit_uri: edit/main/src/
 docs_dir: src
 site_dir: docs
 theme:
   name: material
   custom_dir: overrides
   logo: assets/images/logo.png
+  icon:
+    repo: fontawesome/brands/git-alt 
+    edit: material/pencil 
+    view: material/eye
   favicon: assets/images/favicon.ico
   features:
     - navigation.instant
@@ -13,6 +20,9 @@ theme:
     - navigation.tracking
     - navigation.prune
     - navigation.indexes
+    - navigation.tabs
+    # - header.autohide
+    - navigation.tabs.sticky
     
     - toc.follow
     - search.suggest
@@ -20,6 +30,8 @@ theme:
     - search.share
 
     - content.code.copy
+    # - content.action.edit
+    # - content.action.view
     
   palette:
     scheme: slate
@@ -27,6 +39,16 @@ theme:
     accent: custom
 plugins:
   - search
+  - tags:
+      tags_file: tags.md 
+  - blog
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
 extra:
   generator: false
   social:

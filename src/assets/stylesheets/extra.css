@@ -91,7 +91,7 @@
     --md-default-fg-color: var(--color-text);
     --md-default-fg-color--light: var(--c-white-3);
     --md-default-fg-color--lighter: var(--c-white-4);
-    --md-default-fg-color--lightest: var(--c-white-5);
+    --md-default-fg-color--lightest: var(--c-black-4);
 
     --md-default-bg-color: var(--color-background);
     --md-default-bg-color--light: var(--c-black-1);
@@ -126,7 +126,12 @@ blockquote, .md-typeset table:not([class]) {
 
 .md-header {
     background-color: var(--color-background);
-    border-bottom: var(--border--light);
+}
+
+.md-tabs {
+	background-color: var(--color-background-root);
+	border-top: var(--border--light);
+	border-bottom: var(--border--light);
 }
 
 .md-footer {
@@ -134,7 +139,7 @@ blockquote, .md-typeset table:not([class]) {
 }
 
 .md-footer-meta {
-    background-color: var(--color-background);
+    background-color: var(--color-background-root);
 }
 
 .md-main__inner {
@@ -149,7 +154,6 @@ blockquote, .md-typeset table:not([class]) {
 .md-typeset h1, .md-typeset h2 {
 	font-weight: unset; 
 	letter-spacing: unset;
-   
 }
 
 h1, h2, .title {
@@ -164,8 +168,6 @@ b {
     color: var(--color-text-bold) !important;
 }
 
-
-
 .md-header__title .md-ellipsis {
     background: var(--color-gradient-branch);
     background-clip: text;
@@ -174,11 +176,37 @@ b {
 	font-weight: bold;
 }
 
-.md-search-result__meta {
-	background-color: var(--color-background-input);
-}
-
 table, th, td {
 	border: .05rem solid var(--md-typeset-table-color);
 	border-collapse: collapse;
 }
+
+.md-nav--primary .md-nav__title {
+	background-color: unset;
+	box-shadow: unset;
+}
+
+body::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(#111111 .1em, transparent .1em), linear-gradient(90deg, #111111 .1em, transparent .1em);
+	background-size: 2em 2em;
+    will-change: transform;
+    z-index: -1;
+}
+
+/* body {
+	margin: 0;
+	padding: 0;
+	
+	width: 100%;
+	height: 100vh;
+   
+	background: #333;
+	background-image: linear-gradient(rgba(0, 255, 0, .7) .1em, transparent .1em), linear-gradient(90deg, rgba(0, 255, 0, .7) .1em, transparent .1em);
+	background-size: 3em 3em;
+  } */
